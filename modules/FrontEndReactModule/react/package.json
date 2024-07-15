@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "wp-scripts build --webpack-src-dir=src/ --output-path=../assets/",
-    "start": "wp-scripts start --webpack-src-dir=src/ --output-path=../assets/"
+    "build": "wp-scripts build --webpack-src-dir=src/ --output-path=../../../assets/",
+    "start": "wp-scripts start --webpack-src-dir=src/ --output-path=../../../assets/"
   },
   "author": "",
   "license": "ISC",
