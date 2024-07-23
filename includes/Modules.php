@@ -8,7 +8,7 @@ class Modules extends BaseClass {
 
 
 	public static function get_all_modules() {
-		return [ 'example1module', 'example2module', 'FrontEndReactModule' ];
+		return [ 'example1module', 'example2module', 'FrontEndReactModule', 'CopyrightDateBlockModule' ];
 	}
 
 
