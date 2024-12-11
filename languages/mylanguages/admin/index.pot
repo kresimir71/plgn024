@@ -1,0 +1,181 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-12-10T13:12:28+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: plgn024\n"
+
+#: mylanguages/admin/index.js:4
+msgid "Plugin Settings"
+msgstr ""
+
+#: mylanguages/admin/index.js:6
+msgid "Settings saved successfully."
+msgstr ""
+
+#: mylanguages/admin/index.js:8
+msgid "Failed to save settings."
+msgstr ""
+
+#: mylanguages/admin/index.js:10
+msgid "Saving..."
+msgstr ""
+
+#: mylanguages/admin/index.js:12
+msgid "Save Settings"
+msgstr ""
+
+#: mylanguages/admin/index.js:14
+msgid "No Logs Enabled"
+msgstr ""
+
+#: mylanguages/admin/index.js:16
+msgid "Type and press enter to add"
+msgstr ""
+
+#: mylanguages/admin/index.js:18
+msgid "Select Send When"
+msgstr ""
+
+#: mylanguages/admin/index.js:20
+msgid "Example 1 module Settings"
+msgstr ""
+
+#: mylanguages/admin/index.js:22
+msgid "Example 2 module Settings"
+msgstr ""
+
+#: mylanguages/admin/index.js:24
+msgid "Main Settings"
+msgstr ""
+
+#: mylanguages/admin/index.js:26
+msgid "Advanced Settings"
+msgstr ""
+
+#: mylanguages/admin/index.js:28
+msgid "Example 1 Module Settings"
+msgstr ""
+
+#: mylanguages/admin/index.js:30
+msgid "Example 2 Module Settings"
+msgstr ""
+
+#: mylanguages/admin/index.js:32
+msgid "User name"
+msgstr ""
+
+#: mylanguages/admin/index.js:34
+msgid "Toggle to activate or deactivate Example1module."
+msgstr ""
+
+#: mylanguages/admin/index.js:38
+msgid "Example2module active"
+msgstr ""
+
+#: mylanguages/admin/index.js:40
+msgid "Toggle to activate or deactivate Example2module."
+msgstr ""
+
+#: mylanguages/admin/index.js:42
+msgid "Email"
+msgstr ""
+
+#: mylanguages/admin/index.js:44
+msgid "Enter the required email address."
+msgstr ""
+
+#: mylanguages/admin/index.js:46
+msgid "Please enter a valid email address, like example@domain.com."
+msgstr ""
+
+#: mylanguages/admin/index.js:48
+msgid "Send files by URL"
+msgstr ""
+
+#: mylanguages/admin/index.js:50
+msgid "Toggle to activate or deactivate."
+msgstr ""
+
+#: mylanguages/admin/index.js:52
+msgid "Clean uninstall"
+msgstr ""
+
+#: mylanguages/admin/index.js:54
+msgid "Clean plugin data when uninstalling plugin."
+msgstr ""
+
+#: mylanguages/admin/index.js:56
+msgid "Token"
+msgstr ""
+
+#: mylanguages/admin/index.js:60
+msgid "Boglemodule 1 active"
+msgstr ""
+
+#: mylanguages/admin/index.js:62
+msgid "Toggle to activate or deactivate Boglemodule 1."
+msgstr ""
+
+#: mylanguages/admin/index.js:64
+msgid "Boglemodule 1 User name"
+msgstr ""
+
+#: mylanguages/admin/index.js:66
+msgid "Enter the username specific to Boglemodule 1 settings."
+msgstr ""
+
+#: mylanguages/admin/index.js:68
+msgid "Boglemodule 1 Token"
+msgstr ""
+
+#: mylanguages/admin/index.js:70
+msgid "Enter the token specific to Boglemodule 1 for authentication purposes."
+msgstr ""
+
+#: mylanguages/admin/index.js:72
+msgid "Option active"
+msgstr ""
+
+#: mylanguages/admin/index.js:74
+msgid "Enable or disable the specific option for Boglemodule 1."
+msgstr ""
+
+#: mylanguages/admin/index.js:76
+msgid "Option User name"
+msgstr ""
+
+#: mylanguages/admin/index.js:78
+msgid "Provide a username for the selected option within Boglemodule 1."
+msgstr ""
+
+#: mylanguages/admin/index.js:80
+msgid "Please enter a valid username, like AAAAA1."
+msgstr ""
+
+#: mylanguages/admin/index.js:82
+msgid "Option Token"
+msgstr ""
+
+#: mylanguages/admin/index.js:84
+msgid "Provide a token for secure access to the option in Boglemodule 1."
+msgstr ""
+
+#: mylanguages/admin/index.js:86
+msgid "Please enter a valid token, like BBBBB2."
+msgstr ""
+
+#: mylanguages/admin/index.js:88
+msgid "Example1module active"
+msgstr ""
+
+#: mylanguages/admin/index.js:90
+msgid "Error during GET request"
+msgstr ""

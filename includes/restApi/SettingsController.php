@@ -74,7 +74,18 @@ class SettingsController extends RESTController {
 				'enable_logs'       => [],
 				'clean_uninstall'   => true,
 			],
-		];
+			'boglemodule1'         => [
+				'active'                   => false,
+				'token'                    => '',
+				'username'                 => '',
+				'boglemodule1option'        => [
+					'option'                   => false,
+					'token'                    => '',
+					'username'                 => '',
+				],
+			],
+		] ;
+		
 	}
 
 
@@ -188,7 +199,52 @@ class SettingsController extends RESTController {
 					],
 				],
 			],
-		];
+			'boglemodule1' => [
+			'type'              => 'object',
+			'sanitize_callback' => [ __CLASS__, 'sanitize_param' ],
+			'validate_callback' => 'rest_validate_request_arg',
+			'properties'        => [
+				'active' => [
+					'type' => 'boolean',
+				],
+				'token' => [
+					'type'              => 'string',
+					//'pattern'           => self::PATTERN,
+					'sanitize_callback' => 'sanitize_text_field',
+					'validate_callback' => 'rest_validate_request_arg',
+				],
+				'username' => [
+					'type'              => 'string',
+					//'pattern'           => self::PATTERN,
+					'sanitize_callback' => 'sanitize_text_field',
+					'validate_callback' => 'rest_validate_request_arg',
+				],
+				'boglemodule1option' => [
+					'type'              => 'object',
+					'sanitize_callback' => [ __CLASS__, 'sanitize_param' ],
+					'validate_callback' => 'rest_validate_request_arg',
+					'properties'        => [
+						'option' => [
+							'type' => 'boolean',
+						],
+						'token' => [
+							'type'              => 'string',
+							//'pattern'           => self::PATTERN,
+							'sanitize_callback' => 'sanitize_text_field',
+							'validate_callback' => 'rest_validate_request_arg',
+						],
+						'username' => [
+							'type'              => 'string',
+							//'pattern'           => self::PATTERN,
+							'sanitize_callback' => 'sanitize_text_field',
+							'validate_callback' => 'rest_validate_request_arg',
+						],
+					],
+				],
+			],
+		],
+	];
+	
 	}
 
 

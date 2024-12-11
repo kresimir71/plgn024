@@ -18,8 +18,8 @@
 		"@wordpress/scripts": "^27.9.0"
 	},
 	"dependencies": {
-		"@wordpress/api-fetch": "^7.4.0",
-		"@wordpress/components": "^28.4.0",
-		"@wordpress/element": "^6.4.0"
+		"@wordpress/api-fetch": "^7.3.0",
+		"@wordpress/components": "^28.3.0",
+		"@wordpress/element": "^6.3.0"
 	}
 }

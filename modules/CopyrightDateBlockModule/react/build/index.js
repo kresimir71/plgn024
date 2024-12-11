@@ -1,1 +1,37 @@
-(()=>{"use strict";var e,t={786:()=>{const e=window.React,t=window.wp.blocks,r=window.wp.i18n,o=window.wp.blockEditor,n=window.wp.components,a=JSON.parse('{"UU":"plgn024/copyright-date-block"}'),l=(0,e.createElement)("svg",{viewBox:"0 0 24 24",xmlns:"http://www.w3.org/2000/svg","aria-hidden":"true",focusable:"false"},(0,e.createElement)("path",{d:"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm.5 16c0 .3-.2.5-.5.5H5c-.3 0-.5-.2-.5-.5V7h15v12zM9 10H7v2h2v-2zm0 4H7v2h2v-2zm4-4h-2v2h2v-2zm4 0h-2v2h2v-2zm-4 4h-2v2h2v-2zm4 0h-2v2h2v-2z"}));(0,t.registerBlockType)(a.UU,{edit:function({attributes:t,setAttributes:a}){const{showStartingYear:l,startingYear:c}=t,i=(new Date).getFullYear().toString();let h;return h=l&&c?c+"–"+i:i,(0,e.createElement)(e.Fragment,null,(0,e.createElement)(o.InspectorControls,null,(0,e.createElement)(n.PanelBody,{title:(0,r.__)("Settings","copyright-date-block")},(0,e.createElement)(n.ToggleControl,{checked:!!l,label:(0,r.__)("Show starting year","copyright-date-block"),onChange:()=>a({showStartingYear:!l})}),l&&(0,e.createElement)(n.TextControl,{label:(0,r.__)("Starting year","copyright-date-block"),value:c||"",onChange:e=>a({startingYear:e})}))),(0,e.createElement)("p",{...(0,o.useBlockProps)()},"© ",h))},icon:l})}},r={};function o(e){var n=r[e];if(void 0!==n)return n.exports;var a=r[e]={exports:{}};return t[e](a,a.exports,o),a.exports}o.m=t,e=[],o.O=(t,r,n,a)=>{if(!r){var l=1/0;for(s=0;s<e.length;s++){for(var[r,n,a]=e[s],c=!0,i=0;i<r.length;i++)(!1&a||l>=a)&&Object.keys(o.O).every((e=>o.O[e](r[i])))?r.splice(i--,1):(c=!1,a<l&&(l=a));if(c){e.splice(s--,1);var h=n();void 0!==h&&(t=h)}}return t}a=a||0;for(var s=e.length;s>0&&e[s-1][2]>a;s--)e[s]=e[s-1];e[s]=[r,n,a]},o.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{var e={57:0,350:0};o.O.j=t=>0===e[t];var t=(t,r)=>{var n,a,[l,c,i]=r,h=0;if(l.some((t=>0!==e[t]))){for(n in c)o.o(c,n)&&(o.m[n]=c[n]);if(i)var s=i(o)}for(t&&t(r);h<l.length;h++)a=l[h],o.o(e,a)&&e[a]&&e[a][0](),e[a]=0;return o.O(s)},r=globalThis.webpackChunkcopyright_date_block=globalThis.webpackChunkcopyright_date_block||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})();var n=o.O(void 0,[350],(()=>o(786)));n=o.O(n)})();
+/**
+ * Registers a new block provided a unique name and an object defining its behavior.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+import { registerBlockType } from '@wordpress/blocks';
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * All files containing `style` keyword are bundled together. The code used
+ * gets applied both to the front of your site and to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+import './style.scss';
+
+/**
+ * Internal dependencies
+ */
+import Edit from './edit';
+import metadata from './block.json';
+const calendarIcon = <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm.5 16c0 .3-.2.5-.5.5H5c-.3 0-.5-.2-.5-.5V7h15v12zM9 10H7v2h2v-2zm0 4H7v2h2v-2zm4-4h-2v2h2v-2zm4 0h-2v2h2v-2zm-4 4h-2v2h2v-2zm4 0h-2v2h2v-2z"></path>
+    </svg>;
+
+/**
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+registerBlockType(metadata.name, {
+  /**
+   * @see ./edit.js
+   */
+  edit: Edit,
+  icon: calendarIcon
+});

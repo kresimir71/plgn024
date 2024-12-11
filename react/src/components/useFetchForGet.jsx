@@ -4,6 +4,9 @@
 
 import { useState, useEffect } from 'react';
 import apiFetch from "@wordpress/api-fetch";
+import plugin from "../Plugin.js";
+
+const yourTextDomain = plugin().textDomain;
 
 const useFetchForGet = (url,refresh) => {
     const [dataFromGet, setDataFromGet] = useState(null);
@@ -27,7 +30,7 @@ const useFetchForGet = (url,refresh) => {
 		(error) => {
 		    console.log( 'errorFromGet:', error );
 	       	    setIsPendingForGet(false);
-		    setErrorFromGet('Error during GET request');
+		    setErrorFromGet(__('Error during GET request', yourTextDomain));
 		})
 	    .catch(err => {
 		if (err.name === 'AbortError') {

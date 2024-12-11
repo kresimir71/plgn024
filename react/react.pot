@@ -1,0 +1,185 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/App.js:9
+msgid "Plugin Settings"
+msgstr ""
+
+#: src/components/Dashboard.jsx:48
+msgid "Settings saved successfully."
+msgstr ""
+
+#: src/components/Dashboard.jsx:55
+msgid "Failed to save settings."
+msgstr ""
+
+#: src/components/Dashboard.jsx:73
+msgid "Saving..."
+msgstr ""
+
+#: src/components/Dashboard.jsx:73
+msgid "Save Settings"
+msgstr ""
+
+#: src/components/DisplayAdvancedFormFields.jsx:66
+msgid "No Logs Enabled"
+msgstr ""
+
+#: src/components/DisplayExample1ModuleFormFields.jsx:64
+#: src/components/DisplayExample2ModuleFormFields.jsx:69
+msgid "Type and press enter to add"
+msgstr ""
+
+#: src/components/DisplayExample1ModuleFormFields.jsx:88
+msgid "Select Send When"
+msgstr ""
+
+#: src/components/DisplayTab.jsx:44
+msgid "Example 1 module Settings"
+msgstr ""
+
+#: src/components/DisplayTab.jsx:51
+msgid "Example 2 module Settings"
+msgstr ""
+
+#: src/components/DisplayTab.jsx:59
+msgid "Main Settings"
+msgstr ""
+
+#: src/components/DisplayTab.jsx:70
+msgid "Advanced Settings"
+msgstr ""
+
+#: src/components/DisplayTab.jsx:82
+msgid "Example 1 Module Settings"
+msgstr ""
+
+#: src/components/DisplayTab.jsx:93
+msgid "Example 2 Module Settings"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:10
+msgid "User name"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:100
+msgid "Toggle to activate or deactivate Example1module."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:11
+msgid ""
+"Enter your unique username. It should be 3-30 characters long, starting "
+"with a letter."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:116
+msgid "Example2module active"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:117
+msgid "Toggle to activate or deactivate Example2module."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:126
+msgid "Email"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:127
+msgid "Enter the required email address."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:134
+msgid "Please enter a valid email address, like example@domain.com."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:143
+msgid "Send files by URL"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:144
+msgid "Toggle to activate or deactivate."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:149
+msgid "Clean uninstall"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:150
+msgid "Clean plugin data when uninstalling plugin."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:22
+msgid "Token"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:23
+msgid ""
+"Enter the access token for secure authentication. It should be 3-30 "
+"characters long."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:35
+msgid "Boglemodule 1 active"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:36
+msgid "Toggle to activate or deactivate Boglemodule 1."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:41
+msgid "Boglemodule 1 User name"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:42
+msgid "Enter the username specific to Boglemodule 1 settings."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:53
+msgid "Boglemodule 1 Token"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:54
+msgid "Enter the token specific to Boglemodule 1 for authentication purposes."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:66
+msgid "Option active"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:67
+msgid "Enable or disable the specific option for Boglemodule 1."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:72
+msgid "Option User name"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:73
+msgid "Provide a username for the selected option within Boglemodule 1."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:77
+msgid "Please enter a valid username, like AAAAA1."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:84
+msgid "Option Token"
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:85
+msgid "Provide a token for secure access to the option in Boglemodule 1."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:89
+msgid "Please enter a valid token, like BBBBB2."
+msgstr ""
+
+#: src/components/formFieldsConfiguration.js:99
+msgid "Example1module active"
+msgstr ""
+
+#: src/components/useFetchForGet.jsx:33
+msgid "Error during GET request"
+msgstr ""

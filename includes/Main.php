@@ -48,7 +48,6 @@ final class Main {
 
 		$this->version     = PLGN024_VER;
 		$this->plugin_name = 'plgn024';
-
 		//$this->load_dependencies();
 
 		$this->set_locale();

@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/edit.js:48
+msgid "Settings"
+msgstr ""
+
+#: src/edit.js:51
+msgid "Show starting year"
+msgstr ""
+
+#: src/edit.js:63
+msgid "Starting year"
+msgstr ""

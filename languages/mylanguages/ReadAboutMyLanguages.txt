@@ -1,0 +1,126 @@
+ReadAboutMyLanguages.txt
+------------------------
+
+This document serves as a guide for understanding the 
+/languages/mylanguages workflow and its purpose in the 
+translation pipeline.
+
+Purpose
+-------
+The /languages/mylanguages directory has been created to implement a custom process 
+for scanning PHP, JavaScript, and React files to produce translation files. 
+This approach allows the merging of translations from multiple sources while 
+retaining flexibility. The process is explained using the /react 
+source subdirectory, designed to handle admin settings.
+
+Step-by-Step Process
+--------------------
+
+1. Install and Configure Babel for React Translation Extraction
+--------------------------------------------------------------
+To extract translation strings from React components, install and configure Babel.
+
+Generate .babelrc file dynamically:
+-----------------------------------
+
+generate_babelrc() {
+  local output=$1
+  local domain=$2
+
+  echo '{
+  "plugins": [
+    "@babel/plugin-syntax-jsx",
+    [
+      "@wordpress/babel-plugin-makepot",
+      {
+        "output": "'"$output"'",
+        "domain": "'"$domain"'"
+      }
+    ]
+  ]
+}'
+}
+
+# Navigate to the React source directory
+cd /home/wcusr10670/public_html/test2312/wp-content/plugins/plgn024/react/
+
+# Install required npm packages
+npm install --save-dev @wordpress/babel-plugin-makepot @babel/cli @babel/core
+npm install --save-dev @babel/preset-react 
+
+# Generate .babelrc file for extraction
+generate_babelrc "react.pot" "plgn024" > .babelrc 
+
+# Extract translations into react.pot
+npx babel src --out-dir build
+# Note: The build directory has no functional impact here.
+
+2. Convert .pot File to JavaScript
+-----------------------------------
+Extracted translation strings are converted into a JavaScript file. Use the following function:
+
+convert_pot_to_js() {
+    local input_pot="$1"    # Path to the input .pot file
+    local output_js="$2"    # Path to the output .js file
+    local text_domain="$3"  # Text domain for the strings
+
+    # Create or overwrite the output JS file
+    echo "// This is a generated file from $(basename "$input_pot"). Do not edit directly." > "$output_js"
+
+    local comment=""
+
+    # Process the .pot file
+    while IFS= read -r line; do
+        if [[ $line == \#:* ]]; then
+            # Capture comment lines starting with #:
+            comment="${line/#\#: /}"
+        elif [[ $line == msgid* ]]; then
+            # Process msgid lines
+            local string
+            string=$(echo "$line" | sed -e 's/msgid "\(.*\)"/\1/')
+            if [[ -n $comment ]]; then
+                echo "// Source: $comment" >> "$output_js"
+            fi
+            echo "wp.i18n.__( '$string', '$text_domain' );" >> "$output_js"
+            comment=""  # Reset comment after processing
+        fi
+    done < "$input_pot"
+
+    echo "Generated JavaScript file: $output_js"
+}
+
+# Create directory and convert
+cd /home/wcusr10670/public_html/test2312/wp-content/plugins/plgn024 
+
+mkdir -p languages/mylanguages/admin
+convert_pot_to_js "react/react.pot" "languages/mylanguages/admin/index.js" "plgn024"
+
+3. Generate a .pot File
+------------------------
+Use WordPress CLI to create a .pot file for the admin settings:
+
+wp --allow-root i18n make-pot languages/mylanguages/admin languages/mylanguages/admin/index.pot --debug --domain="plgn024"
+
+4. Create Translations (Example: German)
+-----------------------------------------
+Manually create or use AI tools to generate a .po file:
+
+languages/mylanguages/admin/plgn024-de_DE.po
+
+5. Generate JSON File for Translations
+---------------------------------------
+Generate the .json file required for React translations:
+
+cd /home/wcusr10670/public_html/test2312/wp-content/plugins/plgn024 
+
+wp --allow-root i18n --no-purge make-json languages/mylanguages/admin
+
+# Rename the resulting file
+mv languages/mylanguages/admin/plgn024-de_DE-????????????????????????????????.json languages/mylanguages/admin/plgn024-de_DE.json
+
+6. Utilize the JSON Translations
+---------------------------------
+Refer to includes/AssetManager.php to see how the generated JSON file is loaded 
+and merged with existing translations. The process involves reading the JSON file 
+and injecting its contents into the appropriate scripts for localized string support.
+

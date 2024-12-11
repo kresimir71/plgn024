@@ -91,7 +91,41 @@ class AssetManager extends BaseClass {
 			$data = $this->get_dom_data();
 
 			self::add_dom_data( $handle, $data );
+
+			$this->add_translations( $handle );
 		}
+	}
+	
+	public function add_translations( $handle ) {
+	  $domain = 'plgn024';
+	  $current_locale = determine_locale();
+	  $json_file = '/home/wcusr10670/public_html/test2312/wp-content/plugins/plgn024/languages/mylanguages/admin/plgn024-'.$current_locale.'.json';
+
+	  if ( file_exists( $json_file ) ) {
+	    // Read and decode the JSON file
+	    $json_content = file_get_contents( $json_file );
+	    $json_data = json_decode( $json_content, true );
+
+	    // Extract the ["locale_data"]["messages"] section
+	    $locale_data = $json_data['locale_data']['messages'] ?? [];
+
+	    // Inject the locale data as an inline script
+	    wp_add_inline_script(
+				 $handle,
+				 '
+				 (function() {
+				   const newLocaleData = ' . json_encode($locale_data) . ';
+				   console.log(newLocaleData);
+				   console.log("Inline script loaded");
+				   wp.i18n.setLocaleData(newLocaleData, "' . $domain . '");
+				 })();
+				 ',					       
+				 'before'
+				 );
+	  } else {
+	    error_log( 'JSON file not found: ' . $json_file );
+	  }
+				  
 	}
 
 
